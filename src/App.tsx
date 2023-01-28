@@ -1,8 +1,34 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import reactLogo from "./assets/react.svg";
 
 function App() {
   const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    const tabs = document.querySelectorAll(".tab");
+    const panels = document.querySelectorAll(".panel");
+
+    // Tabs menu event listener
+    const onTabClick = (Selectedtab: any) => {
+      // console.log('tab clicked ')
+      // console.log(Selectedtab)
+      tabs.forEach((tab) => {
+        tab.children[0].classList.remove("active");
+      });
+      Selectedtab.children[0].classList.add("active");
+      // Selectedtab.classList.add('active')
+      // console.log('tab clicked: '+ idx)
+      const classString = Selectedtab.getAttribute("data-target");
+      panels.forEach((panel) => {
+        if (panel.classList.contains(classString)) {
+          panel.classList.remove("hidden");
+        } else panel.classList.add("hidden");
+      });
+    };
+    tabs.forEach((tab, idx) => {
+      tab.addEventListener("click", () => onTabClick(tab));
+    });
+  }, []);
 
   return (
     <>
@@ -115,10 +141,7 @@ function App() {
               className="flex justify-center text-center cursor-pointer text-gray-600 border-b md:border-b-0 hover:text-softRed md:w-1/3 tab"
               data-target="panel-1"
             >
-              <div
-                className="py-5 border-b-4 border-softRed"
-                data-target="panel-1"
-              >
+              <div className="py-5 active" data-target="panel-1">
                 Simple Bookmarking
               </div>
             </div>
@@ -194,11 +217,12 @@ function App() {
               {/* Panel Content  */}
               <div className="flex flex-col space-y-8 md:w-1/2">
                 <h3 className="mt-32 text-3xl font-semibold text-center md:mt-0 md:text-left">
-                Intelligent Search 
+                  Intelligent Search
                 </h3>
                 <p className="max-w-md tracking-widest text-center text-grayishBlue md:text-left">
-                Our powerful search feature will help you find saved sites in no
-                time at all. No need to trawl through all of your bookmarks.
+                  Our powerful search feature will help you find saved sites in
+                  no time at all. No need to trawl through all of your
+                  bookmarks.
                 </p>
                 <div className="mx-auto">
                   <a
@@ -228,11 +252,12 @@ function App() {
               {/* Panel Content  */}
               <div className="flex flex-col space-y-8 md:w-1/2">
                 <h3 className="mt-32 text-3xl font-semibold text-center md:mt-0 md:text-left">
-                Share your bookmarks
+                  Share your bookmarks
                 </h3>
                 <p className="max-w-md tracking-widest text-center text-grayishBlue md:text-left">
-                Easily share your bookmarks and collections with others. Create
-                a shareable a link that you can send at the click of a button.
+                  Easily share your bookmarks and collections with others.
+                  Create a shareable a link that you can send at the click of a
+                  button.
                 </p>
                 <div className="mx-auto">
                   <a

@@ -16,3 +16,7 @@
         @apply absolute rounded-r-full top-60 bg-softBlue
     }
 }
+
+.active{
+    @apply border-b-4 border-softRed
+}
