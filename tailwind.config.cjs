@@ -29,10 +29,11 @@ module.exports = {
         veryDarkBlue : 'hsl(229,31%,21%)'
   
       },
-      // backgroundImage: {
-      //   'coffee': "url('./src/assets/background.jpg')",
-      //   // 'footer-texture': "url('/img/footer-texture.png')",
-      // },
+      backgroundImage: {
+        'coffee': "url('./src/assets/background.jpg')",
+        // 'footer-texture': "url('/img/footer-texture.png')",
+        "dots":"url('./src/assets/bg-dots.svg')"
+      },
       spacing: {
           '128': '32rem',
           '144': '36rem',
