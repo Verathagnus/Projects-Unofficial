@@ -4,7 +4,7 @@ import Arrow from "./assets/icon-arrow.svg";
 
 function App() {
   const [count, setCount] = useState(0);
-
+  const [open, setOpen ] = useState(false);
   useEffect(() => {
     const tabs = document.querySelectorAll(".tab");
     const panels = document.querySelectorAll(".panel");
@@ -30,13 +30,24 @@ function App() {
       tab.addEventListener("click", () => onTabClick(tab));
     });
   }, []);
+  
+
+  const toggleHam = (e:any)=> {
+    e.preventDefault();
+    if(open==false){
+      document.getElementsByTagName('body')[0].classList.add('overflow-hidden')
+    }else {
+      document.getElementsByTagName('body')[0].classList.remove('overflow-hidden')
+    }
+    setOpen(!open)
+  }
 
   return (
     <>
       <nav className="container relative mx-auto p-6">
         {/* <!-- Flex container for nav items --> */}
 
-        <div className="flex items-center justify-between space-x-20 my-6">
+        <div className="hidden md:flex items-center justify-between space-x-20 my-6">
           {/* <!-- logo --> */}
           <div className="z-30">
             <img src="src/assets/logo-bookmark.svg" alt="" id="logo" />
@@ -58,6 +69,66 @@ function App() {
           rounded-lg shadow-md hover:text-softRed hover:bg-white
           "
             >
+              Login
+            </a>
+          </div>
+        </div>
+
+        <div className={`${open?'hidden':""} w-full py-3 text-center flex justify-end`}>
+            <a href="" className="block">
+              <button
+                id="menu-btn"
+                className="  z-30 block md:hidden focus:outline-none hamburger"
+                onClick = {(e)=>toggleHam(e)}
+              >
+                <span className="hamburger-top"></span>
+                <span className="hamburger-middle"></span>
+                <span className="hamburger-bottom"></span>
+              </button>
+            </a>
+          </div>
+      
+        {/* Mobile Menu */}
+
+        <div
+          id="menu"
+          className={`${open?"":"hidden"} fixed inset-0 z-20  flex flex-col items-center self-end
+        w-full h-full min-h-screen px-6 py-1 pt-24 pb-4 tracking-widest text-white uppercase
+        divide-y divide-gray-500 opacity-90 bg-veryDarkBlue
+        
+        `}
+        >
+          
+          <div className="w-full py-3 text-center flex justify-end">
+            <a href="" className="block">
+              <button
+                id="menu-btn"
+                className="  z-30 block md:hidden focus:outline-none hamburger"
+                onClick = {toggleHam}
+              >
+                <span className="hamburger-top"></span>
+                <span className="hamburger-middle"></span>
+                <span className="hamburger-bottom"></span>
+              </button>
+            </a>
+          </div>
+          <div className="w-full py-3 text-center">
+            <a href="" className="block">
+              Features
+            </a>
+          </div>
+          <div className="w-full py-3 text-center">
+            <a href="" className="block">
+              Download
+            </a>
+          </div>{" "}
+          <div className="w-full py-3 text-center">
+            <a href="" className="block">
+              FAQ
+            </a>
+          </div>{" "}
+          <div className="w-full py-3 text-center">
+            <a href="" className="block">
               Login
             </a>
           </div>
@@ -434,52 +505,83 @@ function App() {
       {/* NewsLetter Section */}
       <section id="newsletter" className="bg-softBlue">
         <div className="max-w-lg mx-auto py-24">
-          <p className="mb-6 text-lg tracking-widest text-center
+          <p
+            className="mb-6 text-lg tracking-widest text-center
           text-white uppercase
-          ">
-            35,000 +  Already Joined
+          "
+          >
+            35,000 + Already Joined
           </p>
           <h2 className="px-3 mb-6 text-3xl font-semibold text-center text-white md:text-4xl">
-            Stay up-to-date with what we're doing 
+            Stay up-to-date with what we're doing
           </h2>
           {/* Form */}
-          <form action="" className="flex flex-col items-start
+          <form
+            action=""
+            className="flex flex-col items-start
            justify-center max-w-2xl mx-auto space-y-6 text-base
-            px-6 md:flex-row md:space-y-0 md:space-x-4 md:px-0">
-
-              {/* Input & Button Container */}
-              <div className="flex flex-col justify-between items-center
-              mx-auto md:flex-row md:mx-0">
-                <input type="text" className="flex-1 px-6 pt-3 pb-2 mb-4 rounded-lg border-1
-                 border-white focus:outline-none md:mr-3 md:mb-0" />
-                 <input type="submit" className="inline-flex px-6 py-3 font-semibold text-center text-white duration-200 transform rounded-lg cursor-pointer focus:outline-none bg-softRed hover:opacity-90" />
-              </div>
-            </form>
+            px-6 md:flex-row md:space-y-0 md:space-x-4 md:px-0"
+          >
+            {/* Input & Button Container */}
+            <div
+              className="flex flex-col justify-between items-center
+              mx-auto md:flex-row md:mx-0"
+            >
+              <input
+                type="text"
+                className="flex-1 px-6 pt-3 pb-2 mb-4 rounded-lg border-1
+                 border-white focus:outline-none md:mr-3 md:mb-0"
+              />
+              <input
+                type="submit"
+                className="inline-flex px-6 py-3 font-semibold text-center text-white duration-200 transform rounded-lg cursor-pointer focus:outline-none bg-softRed hover:opacity-90"
+              />
+            </div>
+          </form>
         </div>
       </section>
 
       <section id="footer" className="bg-veryDarkBlue">
         <div className="container flex flex-col items-center justify-between mx-auto  space-y-16 px-6 md:flex-row md:space-y-0">
           {/* Logo Container */}
-          <div className="flex flex-col items-center justify-between space-y-8 my-10 text-lg font-light md:flex-row md:space-y-0 md:space-x-14
+          <div
+            className="flex flex-col items-center justify-between space-y-8 my-10 text-lg font-light md:flex-row md:space-y-0 md:space-x-14
           text-grayishBlue
-          ">
-              <img src="./src/assets/logo-bookmark-footer.svg" alt="" className="mb-1"/>
-              <a href="#features" className="uppercase hover:text-softRed">Features</a>
-              <a href="#features" className="uppercase hover:text-softRed">Download </a>
-              <a href="#features" className="uppercase hover:text-softRed">FAQ</a>
+          "
+          >
+            <img
+              src="./src/assets/logo-bookmark-footer.svg"
+              alt=""
+              className="mb-1"
+            />
+            <a href="#features" className="uppercase hover:text-softRed">
+              Features
+            </a>
+            <a href="#features" className="uppercase hover:text-softRed">
+              Download{" "}
+            </a>
+            <a href="#features" className="uppercase hover:text-softRed">
+              FAQ
+            </a>
           </div>
           {/* Social Container  */}
           <div className="flex space-x-10">
             <a href="">
-              <img src="./src/assets/icon-facebook.svg" alt="" className="h-6 ficon" />
+              <img
+                src="./src/assets/icon-facebook.svg"
+                alt=""
+                className="h-6 ficon"
+              />
             </a>
             <a href="">
-              <img src="./src/assets/icon-twitter.svg" alt="" className="h-6 ficon" />
+              <img
+                src="./src/assets/icon-twitter.svg"
+                alt=""
+                className="h-6 ficon"
+              />
             </a>
           </div>
-         </div>
-
+        </div>
       </section>
     </>
   );
