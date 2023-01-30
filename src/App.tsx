@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
 import reactLogo from "./assets/react.svg";
 import Arrow from "./assets/icon-arrow.svg";
-
+import { useAnimation,motion } from "framer-motion";
+import {useInView} from 'react-intersection-observer'
+import Hero from './components/hero'
+import AboutUs from './components/aboutus'
 function App() {
   const [count, setCount] = useState(0);
-  const [open, setOpen ] = useState(false);
+  const [open, setOpen] = useState(false);
   useEffect(() => {
     const tabs = document.querySelectorAll(".tab");
     const panels = document.querySelectorAll(".panel");
@@ -30,17 +33,18 @@ function App() {
       tab.addEventListener("click", () => onTabClick(tab));
     });
   }, []);
-  
 
-  const toggleHam = (e:any)=> {
+  const toggleHam = (e: any) => {
     e.preventDefault();
-    if(open==false){
-      document.getElementsByTagName('body')[0].classList.add('overflow-hidden')
-    }else {
-      document.getElementsByTagName('body')[0].classList.remove('overflow-hidden')
+    if (open == false) {
+      document.getElementsByTagName("body")[0].classList.add("overflow-hidden");
+    } else {
+      document
+        .getElementsByTagName("body")[0]
+        .classList.remove("overflow-hidden");
     }
-    setOpen(!open)
-  }
+    setOpen(!open);
+  };
 
   return (
     <>
@@ -55,56 +59,64 @@ function App() {
           {/* <!-- Menu Items --> */}
           <div className=" items-center space-x-10 uppercase text-grayishBlue md:flex">
             <a href="" className="tracking-widest hover:text-softRed">
-              Features
+              Home
             </a>
             <a href="" className="tracking-widest hover:text-softRed">
-              Download
+              About Us
+            </a>
+            <a href="" className="tracking-widest hover:text-softRed">
+              Services
             </a>
             <a href="" className="tracking-widest hover:text-softRed">
               FAQ
             </a>
-            <a
+            {/* <a
               href=""
               className="px-8 py-2 text-white bg-softRed border-2 border-softRed
           rounded-lg shadow-md hover:text-softRed hover:bg-white
           "
             >
               Login
-            </a>
+            </a> */}
           </div>
         </div>
 
-        <div className={`${open?'hidden':""} w-full py-3 text-center flex justify-end`}>
-            <a href="" className="block">
-              <button
-                id="menu-btn"
-                className="  z-30 block md:hidden focus:outline-none hamburger"
-                onClick = {(e)=>toggleHam(e)}
-              >
-                <span className="hamburger-top"></span>
-                <span className="hamburger-middle"></span>
-                <span className="hamburger-bottom"></span>
-              </button>
-            </a>
-          </div>
-      
+        <div
+          className={`${
+            open ? "hidden" : ""
+          } w-full py-3 text-center flex justify-end`}
+        >
+          <a href="" className="block">
+            <button
+              id="menu-btn"
+              className="  z-30 block md:hidden focus:outline-none hamburger"
+              onClick={(e) => toggleHam(e)}
+            >
+              <span className="hamburger-top"></span>
+              <span className="hamburger-middle"></span>
+              <span className="hamburger-bottom"></span>
+            </button>
+          </a>
+        </div>
+
         {/* Mobile Menu */}
 
         <div
           id="menu"
-          className={`${open?"":"hidden"} fixed inset-0 z-20  flex flex-col items-center self-end
+          className={`${
+            open ? "" : "hidden"
+          } fixed inset-0 z-20  flex flex-col items-center self-end
         w-full h-full min-h-screen px-6 py-1 pt-24 pb-4 tracking-widest text-white uppercase
         divide-y divide-gray-500 opacity-90 bg-veryDarkBlue
         
         `}
         >
-          
           <div className="w-full py-3 text-center flex justify-end">
             <a href="" className="block">
               <button
                 id="menu-btn"
                 className="  z-30 block md:hidden focus:outline-none hamburger"
-                onClick = {toggleHam}
+                onClick={toggleHam}
               >
                 <span className="hamburger-top"></span>
                 <span className="hamburger-middle"></span>
@@ -136,72 +148,9 @@ function App() {
       </nav>
 
       {/* // Hero Section  */}
-
-      <section id="hero">
-        <div
-          className="container flex flex-col-reverse mx-auto p-6 
-    lg:mb-0
-    lg:flex-row"
-        >
-          {/* Content */}
-          <div className="flex flex-col space-y-10 lg:mt-16 lg:w-1/2">
-            <h1 className="text-3xl font-semibold text-center lg:text-6xl lg:text-left">
-              A Simple Bookmark Manager
-            </h1>
-            <p
-              className="max-w-md mx-auto text-lg text-center text-gray-400
-          lg:text-2xl lg:text-left lg:mt-0 lg:mx-0"
-            >
-              A clean and simple interface to organize your favourite websites.
-              Open a new browser tab and see your sites load instantly. Try it
-              for free.
-            </p>
-            {/* Buttons Container  */}
-
-            <div className="flex items-center justify-center w-full space-x-4 lg:justify-start">
-              <a
-                href=" "
-                className="p-4 text-sm font-semobold text-white bg-softBlue
-            rounded shadow-md font-bold border-[1px] border-softBlue md:text-base hover:bg-white hover:text-softBlue
-            "
-              >
-                {" "}
-                Get It on Chrome
-              </a>
-              <a
-                href=" "
-                className="p-4 text-sm font-semobold text-black bg-gray-300
-            rounded shadow-md font-bold border-[1px] border-gray-300 md:text-base
-             hover:bg-white hover:text-gray-600
-            "
-              >
-                {" "}
-                Get It on FireFox
-              </a>
-            </div>
-          </div>
-          {/* Image */}
-          <div className="relative mx-auto lg:mx-0 lg:mb-0 lg:w-1/2">
-            <div className="bg-hero"></div>
-            <img
-              src="src/assets/illustration-hero.svg"
-              alt=""
-              className="relative z-10 lg:top-24 xl:top-0 overflow-x-visible"
-            />
-          </div>
-        </div>
-      </section>
-      <section id="features">
-        <div className="container mx-auto mt-16 px-6 md:mx-0">
-          <h2 className="mb-6 text-4xl font-semibold text-center">Features</h2>
-          <p className="max-w-md mx-auto text-center text-grayishBlue">
-            Our aim is to make it quick and easy for you to access your
-            favourite websites. Your bookmarks sync between your devices so you
-            can access them on the go.
-          </p>
-        </div>
-      </section>
-
+          
+      <Hero/>
+      <AboutUs/>
       {/* Features Tab */}
       <section id="tabs">
         <div className="container relative mx-auto my-6 mb-32 mt-12 px-6">
@@ -267,7 +216,7 @@ function App() {
                     className="px-6 py-3 mt-4 font-semibold text-white
                 border-2 border-white rounded-lg md:inline-flex 
                 bg-softBlue hover:bg-white hover:text-softBlue 
-                hover:border-2
+                hover:border-2 hover:border-softBlue
                 "
                   >
                     {" "}
@@ -300,10 +249,10 @@ function App() {
                   <a
                     href=""
                     className="px-6 py-3 mt-4 font-semibold text-white
-  border-2 border-white rounded-lg md:inline-flex 
-  bg-softBlue hover:bg-white hover:text-softBlue 
-  hover:border-2
-  "
+                border-2 border-white rounded-lg md:inline-flex 
+                bg-softBlue hover:bg-white hover:text-softBlue 
+                hover:border-2 hover:border-softBlue
+                "
                   >
                     {" "}
                     More Info
@@ -335,10 +284,10 @@ function App() {
                   <a
                     href=""
                     className="px-6 py-3 mt-4 font-semibold text-white
-  border-2 border-white rounded-lg md:inline-flex 
-  bg-softBlue hover:bg-white hover:text-softBlue 
-  hover:border-2
-  "
+                border-2 border-white rounded-lg md:inline-flex 
+                bg-softBlue hover:bg-white hover:text-softBlue 
+                hover:border-2 hover:border-softBlue
+                "
                   >
                     {" "}
                     More Info
@@ -350,17 +299,12 @@ function App() {
         </div>
       </section>
 
-      <section id="download">
+      <section id="outTeam">
         <div className="container mx-auto font-semibold text-center md:text-4xl">
           <h2 className="mb-6 text-3xl font-semibold text-center md:text-4xl">
-            Download the extension
+            Our Team
           </h2>
         </div>
-      </section>
-
-      {/* Download Boxes */}
-
-      <section id="download-boxes" className="py-32">
         {/* Boxes Container */}
         <div className="relative flex flex-col items-center max-w-5xl mx-auto space-y-10 px-10 md:px-6 md:space-y-0 md:space-x-7 md:flex-row">
           {/* Box 1 */}
@@ -369,7 +313,7 @@ function App() {
             <div className="flex justify-center">
               <img src="src/assets/logo-chrome.svg" alt="Chrome Image" />
             </div>
-            <h5 className="pt-6 text-xl font-bold">Add to Chrome</h5>
+            <h5 className="pt-6 text-xl font-bold">Bishwaraj Paul</h5>
             <p className="text-gray-400"> Minimum Version 62</p>
             {/* Dots */}
             <div className="bg-dots bg-repeat-x px-6 pt-6 capitalize">
@@ -377,7 +321,7 @@ function App() {
                 href="#"
                 className="block w-full py-3 text-white duration-200 border-2 rounded-lg bg-softBlue hover:text-softBlue hover:bg-white border-softBlue"
               >
-                Add & Install Extensions
+                More
               </a>
             </div>
           </div>
@@ -386,7 +330,7 @@ function App() {
             <div className="flex justify-center">
               <img src="src/assets/logo-chrome.svg" alt="Chrome Image" />
             </div>
-            <h5 className="pt-6 text-xl font-bold">Add to Chrome</h5>
+            <h5 className="pt-6 text-xl font-bold">Tanveer Ahmed</h5>
             <p className="text-gray-400"> Minimum Version 62</p>
             {/* Dots */}
             <div className="bg-dots bg-repeat-x px-6 pt-6 capitalize">
@@ -394,14 +338,31 @@ function App() {
                 href="#"
                 className="block w-full py-3 text-white duration-200 border-2 rounded-lg bg-softBlue hover:text-softBlue hover:bg-white border-softBlue"
               >
-                Add & Install Extensions
+                More
+              </a>
+            </div>
+          </div>
+          <div className="flex flex-col w-full py-6 space-y-4 text-center rounded-lg shadow-lg md:w-1/3">
+            {/* Image  */}
+            <div className="flex justify-center">
+              <img src="src/assets/logo-chrome.svg" alt="Chrome Image" />
+            </div>
+            <h5 className="pt-6 text-xl font-bold">Chinmoy Talukdar</h5>
+            <p className="text-gray-400"> Minimum Version 62</p>
+            {/* Dots */}
+            <div className="bg-dots bg-repeat-x px-6 pt-6 capitalize">
+              <a
+                href="#"
+                className="block w-full py-3 text-white duration-200 border-2 rounded-lg bg-softBlue hover:text-softBlue hover:bg-white border-softBlue"
+              >
+                More
               </a>
             </div>
           </div>
         </div>
       </section>
       <section id="faq">
-        <div className="container mx-auto">
+        <div className="container mx-auto mt-10 ">
           <h2 className="mb-6 text-3xl font-semibold text-center md:text-4xl">
             Frequently Asked Questions
           </h2>
@@ -554,9 +515,7 @@ function App() {
               alt=""
               className="mb-1"
             />
-            <a href="#features" className="uppercase hover:text-softRed">
-              Features
-            </a>
+            <a href="#features" className="uppercase hover:text-softRed"></a>
             <a href="#features" className="uppercase hover:text-softRed">
               Download{" "}
             </a>
