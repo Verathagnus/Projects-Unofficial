@@ -28,6 +28,29 @@ const hero = () => {
 
     </motion.h1>
   }
+
+  function P1(){
+    const controls = useAnimation();
+    const [refHeading , inView] = useInView(); 
+    useEffect(()=>{
+        if(inView){
+          controls.start('visible')
+        }
+    },[controls,inView ])
+    return <motion.p
+    className="max-w-md mx-auto text-lg text-center text-gray-400
+    lg:text-2xl lg:text-left lg:mt-0 lg:mx-0"
+    ref = {refHeading}
+    initial="hidden"
+    animate = {controls}
+    variants = {heroVariants1}
+    >
+        An enthusiastic web application products team A clean and simple
+            interface to organize your favourite websites. Open a new browser
+            tab and see your sites load instantly. Try it for free.
+
+    </motion.p>
+  }
   return (
     <section id="hero">
       <div
@@ -41,14 +64,7 @@ const hero = () => {
             PROJECTS UNOFFICIAL
           </h1> */}
           <Heading/>
-          <p
-            className="max-w-md mx-auto text-lg text-center text-gray-400
-          lg:text-2xl lg:text-left lg:mt-0 lg:mx-0"
-          >
-            An enthusiastic web application products team A clean and simple
-            interface to organize your favourite websites. Open a new browser
-            tab and see your sites load instantly. Try it for free.
-          </p>
+          <P1/>
           {/* Buttons Container  */}
 
           <div className="flex items-center justify-center w-full space-x-4 lg:justify-start">
@@ -59,9 +75,9 @@ const hero = () => {
             "
             >
               {" "}
-              Get It on Chrome
+              Contact Us 
             </a>
-            <a
+            {/* <a
               href=" "
               className="p-4 text-sm font-semobold text-black bg-gray-300
             rounded shadow-md font-bold border-[1px] border-gray-300 md:text-base
@@ -70,7 +86,7 @@ const hero = () => {
             >
               {" "}
               Get It on FireFox
-            </a>
+            </a> */}
           </div>
         </div>
         {/* Image */}
