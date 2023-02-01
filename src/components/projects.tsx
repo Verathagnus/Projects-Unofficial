@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-const Team = () => {
+const Projects = () => {
      const headingVariants = {
       visible: { x: 0, y: 0, scale: 1, opacity: 1, transition: { duration: 1  } },
         hidden: { x: 0, y: 80, scale: 1, opacity: 0 },
@@ -35,7 +35,7 @@ const Team = () => {
         animate = {controls}
         variants = {headingVariants}
         >
-          Our Team
+          Our Projects
         </motion.h2>
     }
 
@@ -56,17 +56,17 @@ const Team = () => {
         variants = {square1Variants}
         >
             <div className="flex justify-center">
-              <img src="src/assets/tanveer.webp" alt="Chrome Image" />
+              <img src="src/assets/apexsite.png" alt="Apex site" />
             </div>
-            <h5 className="pt-6 text-xl font-bold">Bishwaraj Paul</h5>
-            <p className="text-gray-400"> SDE at Brillio</p>
+            <h5 className="pt-6 text-xl font-bold">Apex Design & Construction</h5>
+            <p className="text-gray-400"> WebSite for Design & Construction Site</p>
             {/* Dots */}
             <div className="bg-dots bg-repeat-x px-6 pt-6 capitalize">
               <a
-                href="#"
+                href="https://www.apexconst.in"
                 className="block w-full py-3 text-white duration-200 border-2 rounded-lg bg-softBlue hover:text-softBlue hover:bg-white border-softBlue"
               >
-                More
+                Visit Site
               </a>
             </div>
         </motion.div>
@@ -88,13 +88,18 @@ const Team = () => {
       variants = {square2Variants}
       >
           <div className="flex justify-center">
-            <img src="src/assets/tanveer.webp" alt="Chrome Image" />
+            <img src="src/assets/apexsite.png" alt="Chrome Image" />
           </div>
-          <h5 className="pt-6 text-xl font-bold">Chinmoy Talukdar</h5>
-          <p className="text-gray-400"> SDE at Publicis Sapient</p>
+          <h5 className="pt-6 text-xl font-bold">Ganasuraksha Party Site</h5>
+          <p className="text-gray-400"> WebSite for Political Party</p>
           {/* Dots */}
           <div className="bg-dots bg-repeat-x px-6 pt-6 capitalize">
-            
+            <a
+              href="https://ganasurakshaparty.in/"
+              className="block w-full py-3 text-white duration-200 border-2 rounded-lg bg-softBlue hover:text-softBlue hover:bg-white border-softBlue"
+            >
+              Visit Site
+            </a>
           </div>
       </motion.div>
 
@@ -116,9 +121,9 @@ const Team = () => {
       variants = {square3Variants}
       >
           <div className="flex justify-center">
-            <img src="src/assets/tanveer.webp" alt="Chrome Image" />
+            <img src="src/assets/apexsite.png" alt="Ganasuraksha" />
           </div>
-          <h5 className="pt-6 text-xl font-bold">Tanveer Ahmed</h5>
+          <h5 className="pt-6 text-xl font-bold"></h5>
           <p className="text-gray-400"> SDE at Brillio</p>
           {/* Dots */}
           <div className="bg-dots bg-repeat-x px-6 pt-6 capitalize">
@@ -133,7 +138,7 @@ const Team = () => {
 
     }
   return (
-    <section id="ourTeam">
+    <section id="ourProjects">
         <div className="container mx-auto font-semibold text-center md:text-4xl">
           <Heading/>
         </div>
@@ -143,11 +148,11 @@ const Team = () => {
           
             <Square1/>
             <Square2/>
-            <Square3/>
+            {/* <Square3/> */}
           
         </div>
       </section>
   )
 }
 
-export default Team
+export default Projects

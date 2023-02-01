@@ -1,56 +1,125 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 const hero = () => {
-
-    // from left to right 
+  // from left to right
   const heroVariants1 = {
     visible: { x: 0, y: 0, scale: 1, opacity: 1, transition: { duration: 1 } },
     hidden: { x: -120, y: 0, scale: 1, opacity: 0 },
   };
+
+  const heroVariants2 = {
+    visible: { x: 0, y: 0, scale: 1, opacity: 1, transition: { duration: 1 } },
+    hidden: { x: 120, y: 0, scale: 1, opacity: 0 },
+  };
+
+  const heroVariants3 = {
+    visible: {  scale: 1, opacity: 1, transition: { duration: 1 } },
+    hidden: { scale: 0, opacity: 0 },
+  };
+
   
-  function Heading(){
-    const controls = useAnimation();
-    const [refHeading , inView] = useInView(); 
-    useEffect(()=>{
-        if(inView){
-          controls.start('visible')
-        }
-    },[controls,inView ])
-    return <motion.h1
-    className="text-3xl font-semibold text-center lg:text-5xl lg:text-left"
-    ref = {refHeading}
-    initial="hidden"
-    animate = {controls}
-    variants = {heroVariants1}
-    >
-      PROJECTS UNOFFICIAL
 
-    </motion.h1>
+  function Heading() {
+    const controls = useAnimation();
+    const [refHeading, inView] = useInView();
+    useEffect(() => {
+      if (inView) {
+        controls.start("visible");
+      }
+    }, [controls, inView]);
+    return (
+      <motion.h1
+        className="text-3xl font-semibold text-center lg:text-5xl lg:text-left"
+        ref={refHeading}
+        initial="hidden"
+        animate={controls}
+        variants={heroVariants1}
+      >
+        PROJECTS UNOFFICIAL
+      </motion.h1>
+    );
   }
 
-  function P1(){
+  function P1() {
     const controls = useAnimation();
-    const [refHeading , inView] = useInView(); 
-    useEffect(()=>{
-        if(inView){
-          controls.start('visible')
-        }
-    },[controls,inView ])
-    return <motion.p
-    className="max-w-md mx-auto text-lg text-center text-gray-400
+    const [refHeading, inView] = useInView();
+    useEffect(() => {
+      if (inView) {
+        controls.start("visible");
+      }
+    }, [controls, inView]);
+    return (
+      <motion.p
+        className="max-w-md mx-auto text-lg text-center text-gray-400
     lg:text-2xl lg:text-left lg:mt-0 lg:mx-0"
-    ref = {refHeading}
-    initial="hidden"
-    animate = {controls}
-    variants = {heroVariants1}
-    >
+        ref={refHeading}
+        initial="hidden"
+        animate={controls}
+        variants={heroVariants1}
+      >
         An enthusiastic web application products team A clean and simple
-            interface to organize your favourite websites. Open a new browser
-            tab and see your sites load instantly. Try it for free.
-
-    </motion.p>
+        interface to organize your favourite websites. Open a new browser tab
+        and see your sites load instantly. Try it for free.
+      </motion.p>
+    );
   }
+
+  function SideImage() {
+    const controls = useAnimation();
+    const [refHeading, inView] = useInView();
+    useEffect(() => {
+      if (inView) {
+        controls.start("visible");
+      }
+    }, [controls, inView]);
+    return (
+      <motion.div
+        className="relative mx-auto lg:mx-0 lg:mb-0 lg:w-1/2"
+        ref={refHeading}
+        initial="hidden"
+        animate={controls}
+        variants={heroVariants2}
+      >
+        <div className="bg-hero"></div>
+        <img
+          src="src/assets/illustration-hero.svg"
+          alt=""
+          className="relative z-10 lg:top-24 xl:top-0 overflow-x-visible"
+        />
+      </motion.div>
+    );
+  }
+
+  function ContactUs() {
+    const controls = useAnimation();
+    const [ref, inView] = useInView();
+    useEffect(() => {
+      if (inView) {
+        controls.start("visible");
+      }
+    }, [controls, inView]);
+    return (
+      <motion.div
+        className="flex items-center justify-center w-full space-x-4 lg:justify-start"
+        ref={ref}
+        initial="hidden"
+        animate={controls}
+        variants={heroVariants3}
+      >
+        <a
+          href=" "
+          className="p-4 text-sm font-semobold text-white bg-softBlue
+            rounded shadow-md font-bold border-[1px] border-softBlue md:text-base hover:bg-white hover:text-softBlue
+            "
+        >
+          {" "}
+          Contact Us
+        </a>
+      </motion.div>
+    );
+  }
+
   return (
     <section id="hero">
       <div
@@ -63,11 +132,12 @@ const hero = () => {
           {/* <h1 className="text-3xl font-semibold text-center lg:text-5xl lg:text-left">
             PROJECTS UNOFFICIAL
           </h1> */}
-          <Heading/>
-          <P1/>
+          <Heading />
+          <P1 />
           {/* Buttons Container  */}
 
-          <div className="flex items-center justify-center w-full space-x-4 lg:justify-start">
+          <ContactUs/>
+          {/* <div className="flex items-center justify-center w-full space-x-4 lg:justify-start">
             <a
               href=" "
               className="p-4 text-sm font-semobold text-white bg-softBlue
@@ -75,9 +145,9 @@ const hero = () => {
             "
             >
               {" "}
-              Contact Us 
+              Contact Us
             </a>
-            {/* <a
+            <a
               href=" "
               className="p-4 text-sm font-semobold text-black bg-gray-300
             rounded shadow-md font-bold border-[1px] border-gray-300 md:text-base
@@ -86,18 +156,19 @@ const hero = () => {
             >
               {" "}
               Get It on FireFox
-            </a> */}
-          </div>
+            </a>
+          </div> */}
         </div>
         {/* Image */}
-        <div className="relative mx-auto lg:mx-0 lg:mb-0 lg:w-1/2">
+        <SideImage />
+        {/* <div className="relative mx-auto lg:mx-0 lg:mb-0 lg:w-1/2">
           <div className="bg-hero"></div>
           <img
             src="src/assets/illustration-hero.svg"
             alt=""
             className="relative z-10 lg:top-24 xl:top-0 overflow-x-visible"
           />
-        </div>
+        </div> */}
       </div>
     </section>
   );
