@@ -9,7 +9,7 @@ import Team from './components/ourteam'
 import NewsLetter from "./components/newsletter";
 import Faq from './components/faq'
 import Projects from './components/projects'
-import Contact from './components/contact'
+import Contact from './components/Contact/contact'
 
 function App() {
   const [count, setCount] = useState(0);
@@ -312,6 +312,13 @@ function App() {
 
      {/* Projects  */}
      <Projects/>
+
+     {/* Contact */}
+
+     <div className="w-full ">
+     <Contact/>
+
+     </div>
 
       {/* NewsLetter Section */}
       
