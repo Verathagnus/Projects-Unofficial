@@ -10,6 +10,7 @@ import NewsLetter from "./components/newsletter";
 import Faq from './components/faq'
 import Projects from './components/projects'
 import Contact from './components/Contact/contact'
+import Footer from "./components/Footer";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -54,7 +55,7 @@ function App() {
 
   return (
     <>
-      <nav className="container relative mx-auto p-6">
+      <nav className="container relative mx-auto px-1">
         {/* <!-- Flex container for nav items --> */}
 
         <div className="hidden md:flex items-center justify-between space-x-20 my-6">
@@ -63,18 +64,27 @@ function App() {
             <img src="src/assets/logo-bookmark.svg" alt="" id="logo" />
           </div>
           {/* <!-- Menu Items --> */}
-          <div className=" items-center space-x-10 uppercase text-grayishBlue md:flex">
-            <a href="" className="tracking-widest hover:text-softRed">
+          <div className=" items-center space-x-4 uppercase text-grayishBlue md:flex">
+            <a href="" className="tracking-tight hover:text-softRed">
               Home
             </a>
-            <a href="" className="tracking-widest hover:text-softRed">
+            <a href="" className="tracking-tight hover:text-softRed">
               About Us
             </a>
-            <a href="" className="tracking-widest hover:text-softRed">
+            <a href="" className="tracking-tight hover:text-softRed">
               Services
             </a>
-            <a href="" className="tracking-widest hover:text-softRed">
+            <a href="" className="tracking-tight hover:text-softRed">
+              Projects
+            </a>
+            <a href="" className="tracking-tight hover:text-softRed">
               FAQ
+            </a>
+            <a href="" className="tracking-tight hover:text-softRed">
+              newsletter
+            </a>
+            <a href="" className="tracking-tight hover:text-softRed">
+              contact us
             </a>
             {/* <a
               href=""
@@ -130,32 +140,52 @@ function App() {
               </button>
             </a>
           </div>
-          <div className="w-full py-3 text-center">
+          <div className="w-full py-3 text-center hover:text-blue-500">
             <a href="" className="block">
-              Features
+              Home
             </a>
           </div>
-          <div className="w-full py-3 text-center">
+          <div className="w-full py-3 text-center hover:text-blue-500">
             <a href="" className="block">
-              Download
+              About us
             </a>
           </div>{" "}
-          <div className="w-full py-3 text-center">
+          <div className="w-full py-3 text-center hover:text-blue-500">
+            <a href="" className="block">
+              Services
+            </a>
+          </div>{" "}
+          <div className="w-full py-3 text-center hover:text-blue-500 hover:shadow-blue-500 hover:shadow-">
+            <a href="" className="block">
+              Projects
+            </a>
+          </div>{" "}
+          <div className="w-full py-3 text-center hover:text-blue-500">
             <a href="" className="block">
               FAQ
             </a>
-          </div>{" "}
-          <div className="w-full py-3 text-center">
+          </div>
+          <div className="w-full py-3 text-center hover:text-blue-500">
             <a href="" className="block">
-              Login
+              NewsLetter
+            </a>
+          </div>
+          <div className="w-full py-3 text-center hover:text-blue-500">
+            <a href="" className="block">
+              Contact Us
             </a>
           </div>
         </div>
       </nav>
 
       {/* // Hero Section  */}
-          
+
+      
+      <div className="w-full bg-heroBg bg-cover bg-no-repeat ">
       <Hero/>
+
+      </div>
+        
       <AboutUs/>
       {/* Features Tab */}
       <section id="tabs">
@@ -313,6 +343,9 @@ function App() {
      {/* Projects  */}
      <Projects/>
 
+      {/* NewsLetter Section */}
+      
+        <NewsLetter/>
      {/* Contact */}
 
      <div className="w-full ">
@@ -320,49 +353,8 @@ function App() {
 
      </div>
 
-      {/* NewsLetter Section */}
-      
-        <NewsLetter/>
-      <section id="footer" className="bg-veryDarkBlue">
-        <div className="container flex flex-col items-center justify-between mx-auto  space-y-16 px-6 md:flex-row md:space-y-0">
-          {/* Logo Container */}
-          <div
-            className="flex flex-col items-center justify-between space-y-8 my-10 text-lg font-light md:flex-row md:space-y-0 md:space-x-14
-          text-grayishBlue
-          "
-          >
-            <img
-              src="./src/assets/logo-bookmark-footer.svg"
-              alt=""
-              className="mb-1"
-            />
-            <a href="#features" className="uppercase hover:text-softRed"></a>
-            <a href="#features" className="uppercase hover:text-softRed">
-              Download{" "}
-            </a>
-            <a href="#features" className="uppercase hover:text-softRed">
-              FAQ
-            </a>
-          </div>
-          {/* Social Container  */}
-          <div className="flex space-x-10">
-            <a href="">
-              <img
-                src="./src/assets/icon-facebook.svg"
-                alt=""
-                className="h-6 ficon"
-              />
-            </a>
-            <a href="">
-              <img
-                src="./src/assets/icon-twitter.svg"
-                alt=""
-                className="h-6 ficon"
-              />
-            </a>
-          </div>
-        </div>
-      </section>
+     {/* Footer */}
+     <Footer/>
     </>
   );
 }

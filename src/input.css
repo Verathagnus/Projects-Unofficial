@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+ /* @apply bg-fixed bg-heroBg bg-no-repeat bg-cover */
+}
 @media (min-width: 1020px){
     .bg-hero{
         width: 2000px;

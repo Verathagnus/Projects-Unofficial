@@ -1,22 +1,78 @@
-import React from 'react'
+import { useAnimation, motion } from "framer-motion";
+
+import { useInView } from "react-intersection-observer";
+import React, { useEffect } from 'react'
 
 const Faq = () => {
-  return (
-    <>
-         <section id="faq">
-        <div className="container mx-auto mt-20 ">
-          <h2 className="mb-6 text-3xl font-semibold text-center md:text-4xl">
-            Frequently Asked Questions
-          </h2>
-          <p className="max-w-lg px-6 mx-auto text-center text-grayishBlue">
-            Here are some of our FAQs. If you have any other questions you'd
+  const Variants1 = {
+    visible: { x: 0, y: 0, scale: 1, opacity: 1, transition: { duration: 1 } },
+    hidden: { x: 0, y: 120, scale: 1, opacity: 0 },
+  };
+
+  const Variants2 = {
+    visible: { x: 0, y: 0, scale: 1, opacity: 1, transition: { duration: 1 } },
+    hidden: { x: -120, y: 0, scale:0, opacity: 0 },
+  };
+  function Heading() {
+    const controls = useAnimation();
+    const [refHeading, inView] = useInView();
+    useEffect(() => {
+      if (inView) {
+        controls.start("visible");
+      }
+    }, [controls, inView]);
+    return (
+      <motion.h2
+        className="mb-6 text-3xl font-semibold text-center md:text-4xl"
+        ref={refHeading}
+        initial="hidden"
+        animate={controls}
+        variants={Variants1}
+      >
+       Frequently Asked Questions
+      </motion.h2>
+    );
+  }
+
+  function P1(){
+    const controls = useAnimation();
+    const [refHeading, inView] = useInView();
+    useEffect(() => {
+      if (inView) {
+        controls.start("visible");
+      }
+    }, [controls, inView]);
+    return (
+      <motion.p
+        className="max-w-lg px-6 mx-auto text-center text-grayishBlue"
+        ref={refHeading}
+        initial="hidden"
+        animate={controls}
+        variants={Variants1}
+      >
+         Here are some of our FAQs. If you have any other questions you'd
             like answer please feel free to email us
-          </p>
-        </div>
-      </section>
-      <section id="faq-accordion">
-        {/* Main Container */}
-        <div className="container mx-auto px-6 mb-32">
+      </motion.p>
+    );
+  }
+
+  function FAQSection(){
+    const controls = useAnimation();
+    const [refHeading, inView] = useInView();
+    useEffect(() => {
+      if (inView) {
+        controls.start("visible");
+      }
+    }, [controls, inView]);
+    return (
+      <motion.div
+        className="container mx-auto px-6 mb-32"
+        ref={refHeading}
+        initial="hidden"
+        animate={controls}
+        variants={Variants2}
+      >
+        
           {/* Accordion Container */}
 
           <div className="max-w-2xl m-8 mx-auto overflow-hidden">
@@ -102,7 +158,26 @@ const Faq = () => {
               </div>
             </div>
           </div>
+        
+      </motion.div>
+    );
+
+    
+
+  }
+  return (
+    <>
+         <section id="faq">
+        <div className="container mx-auto mt-20 ">
+         <Heading/>
+         <P1/>
         </div>
+      </section>
+      <section id="faq-accordion">
+        {/* Main Container */}
+
+        <FAQSection/>
+        
       </section>
     </>
   )

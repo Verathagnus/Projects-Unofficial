@@ -1,5 +1,8 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState ,useEffect} from "react";
 import { sendMessageEmail } from "./service";
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
 import {
   Formik,
   Form,
@@ -44,40 +47,33 @@ const MyTextArea = ({ label, ...props }:any) => {
 };
 
 const Contact = () => {
-  
 
-  const capRef = useRef<any>(null)
-  const [isVerified, setVerified] = useState(false);
-  function onChange(response: any) {
-    if (response) {
-      setVerified(true);
-    }
-  }
- 
-  let recaptchaInstance:any;
-
-  const formInitialValues = {
-    fName: "",
-    lName: "",
-    email: "",
-    mobile: "",
-    message: "",
+   const Variants1 = {
+    visible: { x: 0, y: 0, scale: 1, opacity: 1, transition: { duration: 1 } },
+    hidden: { x: -120, y: 0, scale: 1, opacity: 0 },
   };
 
-  const resetCaptcha = ()=>{
-    // capRef.current.reset(); // syntax -1 
-   recaptchaInstance.reset(); // syntax -2
-  }
-  const captchaSubmit= (e:any)=>{
-    e.preventDefault();
-    // document.getElementById("demo-form").submit();
-    
-  }
-  return (
-    
+     const Variants2 = {
+    visible: { x: 0, y: 0, scale: 1, opacity: 1, transition: { duration: 1 } },
+    hidden: { x: 120, y: 0, scale: 1, opacity: 0 },
+  };
 
-    <div id="contact" className=" w-[80%] mx-auto flex pt-10 flex-col md:flex-row md:justify-center md:items-center justify-center items-center ">
-      <div className="w-[50%]">
+  function LeftSection() {
+    const controls = useAnimation();
+    const [refHeading, inView] = useInView();
+    useEffect(() => {
+      if (inView) {
+        controls.start("visible");
+      }
+    }, [controls, inView]);
+    return (
+      <motion.div
+        className="w-[50%] mr-5"
+        ref={refHeading}
+        initial="hidden"
+        animate={controls}
+        variants={Variants1}
+      >
         <h3 className=" font-bold text-center text-softBlue text-4xl md:text-6xl ">
           {" "}
           WRITE TO US
@@ -86,9 +82,27 @@ const Contact = () => {
           {" "}
           Feel Free to Connect
         </p>
-      </div>
-
-      <Formik
+      </motion.div>
+    );
+  }
+  
+  function RightSection() {
+    const controls = useAnimation();
+    const [refHeading, inView] = useInView();
+    useEffect(() => {
+      if (inView) {
+        controls.start("visible");
+      }
+    }, [controls, inView]);
+    return (
+      <motion.div
+        className=""
+        ref={refHeading}
+        initial="hidden"
+        animate={controls}
+        variants={Variants2}
+      >
+       <Formik
         initialValues={formInitialValues}
         validate={(values) => {
           const errors: any = {};
@@ -309,6 +323,54 @@ const Contact = () => {
           </div>
         )}
       </Formik>
+      </motion.div>
+    );
+  }
+
+  const capRef = useRef<any>(null)
+  const [isVerified, setVerified] = useState(false);
+  function onChange(response: any) {
+    if (response) {
+      setVerified(true);
+    }
+  }
+ 
+  let recaptchaInstance:any;
+
+  const formInitialValues = {
+    fName: "",
+    lName: "",
+    email: "",
+    mobile: "",
+    message: "",
+  };
+
+  const resetCaptcha = ()=>{
+    // capRef.current.reset(); // syntax -1 
+   recaptchaInstance.reset(); // syntax -2
+  }
+  const captchaSubmit= (e:any)=>{
+    e.preventDefault();
+    // document.getElementById("demo-form").submit();
+    
+  }
+  return (
+    
+
+    <div id="contact" className=" w-[90%] mx-auto flex pt-10 flex-col md:flex-row md:justify-center md:items-center justify-center items-center ">
+      {/* <div className="w-[50%] mr-5">
+        <h3 className=" font-bold text-center text-softBlue text-4xl md:text-6xl ">
+          {" "}
+          WRITE TO US
+        </h3>
+        <p className=" text-gray-600 myyarn add -2 text-center text-2xl dark:text-white">
+          {" "}
+          Feel Free to Connect
+        </p>
+      </div> */}
+      <LeftSection/>
+<RightSection/>
+      
     </div>
 
 

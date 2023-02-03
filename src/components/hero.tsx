@@ -30,7 +30,7 @@ const hero = () => {
     }, [controls, inView]);
     return (
       <motion.h1
-        className="text-3xl font-semibold text-center lg:text-5xl lg:text-left"
+        className="text-3xl font-semibold text-center text-white lg:text-5xl lg:text-left"
         ref={refHeading}
         initial="hidden"
         animate={controls}
@@ -51,16 +51,15 @@ const hero = () => {
     }, [controls, inView]);
     return (
       <motion.p
-        className="max-w-md mx-auto text-lg text-center text-gray-400
+        className="max-w-md mx-auto text-lg text-center text-white
     lg:text-2xl lg:text-left lg:mt-0 lg:mx-0"
         ref={refHeading}
         initial="hidden"
         animate={controls}
         variants={heroVariants1}
       >
-        An enthusiastic web application products team A clean and simple
-        interface to organize your favourite websites. Open a new browser tab
-        and see your sites load instantly. Try it for free.
+        An enthusiastic web application products team building products for clients at a affordable price with great features and support.
+        Site 
       </motion.p>
     );
   }
@@ -125,7 +124,9 @@ const hero = () => {
       <div
         className="container flex flex-col-reverse mx-auto p-6 
     lg:mb-0
-    lg:flex-row"
+    lg:flex-row
+    
+    "
       >
         {/* Content */}
         <div className="flex flex-col space-y-10 lg:mt-16 lg:w-1/2">
