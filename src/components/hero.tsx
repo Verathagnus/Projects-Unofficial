@@ -120,7 +120,7 @@ const hero = () => {
   }
 
   return (
-    <section id="hero">
+    <section id="hero" className="bg-heroBg bg-cover bg-fixed py-16">
       <div
         className="container flex flex-col-reverse mx-auto p-6 
     lg:mb-0

@@ -181,10 +181,10 @@ function App() {
       {/* // Hero Section  */}
 
       
-      <div className="w-full bg-heroBg bg-cover bg-no-repeat ">
+      {/* <div className="w-full bg-heroBg bg-cover bg-no-repeat "> */}
       <Hero/>
 
-      </div>
+      {/* </div> */}
         
       <AboutUs/>
       
