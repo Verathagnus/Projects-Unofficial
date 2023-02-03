@@ -59,7 +59,7 @@ const hero = () => {
         variants={heroVariants1}
       >
         An enthusiastic web application products team building products for clients at a affordable price with great features and support.
-        Site 
+        
       </motion.p>
     );
   }
