@@ -10,8 +10,8 @@ const Footer = () => {
       text-grayishBlue
       "
         >
-          <div>© 2022 Copyright Project Unofficial.</div>
-          <div className="w-full">All Rights Reserved . Designed by Project Unofficial</div>
+          <div>© 2022 Copyright LuitMania.</div>
+          <div className="w-full">All Rights Reserved . Designed by LuitMania</div>
         </div>
       </div>
     </section>
