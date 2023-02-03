@@ -36,7 +36,7 @@ const hero = () => {
         animate={controls}
         variants={heroVariants1}
       >
-        PROJECTS UNOFFICIAL
+        BRINGING YOUR TECHNOLOGICAL NEEDS AT AFFORDABLE PRICE
       </motion.h1>
     );
   }

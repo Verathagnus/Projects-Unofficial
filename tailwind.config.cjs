@@ -33,7 +33,8 @@ module.exports = {
         'coffee': "url('./src/assets/background.jpg')",
         // 'footer-texture': "url('/img/footer-texture.png')",
         "dots":"url('./src/assets/bg-dots.svg')",
-        "heroBg" :"url('./src/assets/background.jpg')"
+        "heroBg" :"url('./src/assets/background.jpg')",
+        "newsLetterBg":"url('./src/assets/background2.jpg')"
       },
       spacing: {
           '128': '32rem',

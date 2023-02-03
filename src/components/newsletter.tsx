@@ -69,7 +69,7 @@ const NewsLetter = () => {
   }
 
   return (
-    <section id="newsletter" className="bg-softBlue">
+    <section id="newsletter" className="bg-cover bg-softBlue bg-newsLetterBg bg-fixed">
       {/* <div className="max-w-lg mx-auto py-24 mt-20">
         <p
           className="mb-6 text-lg tracking-widest text-center

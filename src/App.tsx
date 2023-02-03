@@ -58,10 +58,10 @@ function App() {
       <nav className="container relative mx-auto px-1">
         {/* <!-- Flex container for nav items --> */}
 
-        <div className="hidden font-serif text-bold md:flex items-center justify-between space-x-20 my-6">
+        <div className="hidden md:flex items-center justify-between space-x-20 my-6">
           {/* <!-- logo --> */}
           <div className="z-30">
-            <h2 className="text-3xl font-bold text-softBlue uppercase"> project unofficial</h2>
+            <img src="src/assets/luitmania-logo.png" alt="" id="logo" className="w-[200px] " />
           </div>
           {/* <!-- Menu Items --> */}
           <div className=" items-center space-x-4 uppercase text-grayishBlue md:flex">
