@@ -47,7 +47,7 @@ const Team = () => {
     }, [controls, inView]);
     return (
       <motion.h2
-        className="mb-6 text-3xl font-semibold text-center md:text-4xl"
+        className="mb-6 mt-20 text-3xl font-semibold text-center md:text-4xl"
         ref={ref}
         initial="hidden"
         animate={controls}
@@ -83,21 +83,21 @@ const Team = () => {
         {/* Dots */}
         <div className="bg-dots bg-repeat-x px-6 pt-6 capitalize">
           <div className="w-full flex justify-around">
-            <a href="https://www.facebook.com/profile.php?id=100017390656704">
+            <a href="https://www.facebook.com/bishwaraj.paul">
               <img
                 src="/src/assets/facebook.svg"
                 alt=""
                 className="w-[24px] hover:cursor-pointer hover:scale-110"
               />
             </a>
-            <a href="https://www.linkedin.com/in/tanveer-ahmed-589055112/">
+            <a href="https://www.linkedin.com/in/bishwarajpaul/">
               <img
                 src="/src/assets/linkedin.svg"
                 alt=""
                 className="w-[32px] hover:cursor-pointer hover:scale-110"
               />
             </a>
-            <a href="https://github.com/tanveer-98">
+            <a href="https://github.com/Verathagnus">
               <img
                 src="/src/assets/github.svg"
                 alt=""
@@ -134,21 +134,21 @@ const Team = () => {
         {/* Dots */}
         <div className="bg-dots bg-repeat-x px-6 pt-6 capitalize">
           <div className="w-full flex justify-around">
-            <a href="https://www.facebook.com/profile.php?id=100017390656704">
+            <a href="https://www.facebook.com/chinmoytalukdar.chinmoy">
               <img
                 src="/src/assets/facebook.svg"
                 alt=""
                 className="w-[24px] hover:cursor-pointer hover:scale-110"
               />
             </a>
-            <a href="https://www.linkedin.com/in/tanveer-ahmed-589055112/">
+            <a href="https://www.linkedin.com/in/chinmoy-talukdar-sde/">
               <img
                 src="/src/assets/linkedin.svg"
                 alt=""
                 className="w-[32px] hover:cursor-pointer hover:scale-110"
               />
             </a>
-            <a href="https://github.com/tanveer-98">
+            <a href="https://github.com/Chinmoy222">
               <img
                 src="/src/assets/github.svg"
                 alt=""
@@ -171,7 +171,7 @@ const Team = () => {
 
     return (
       <motion.div
-        className="flex flex-col w-full py-6 space-y-4 text-center rounded-lg shadow-lg md:w-1/3"
+        className="flex flex-col w-full py-6  space-y-4 text-center rounded-lg shadow-lg md:w-1/3"
         ref={refSquare1}
         initial="hidden"
         animate={controls}
