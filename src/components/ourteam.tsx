@@ -85,21 +85,21 @@ const Team = () => {
           <div className="w-full flex justify-around">
             <a href="https://www.facebook.com/bishwaraj.paul">
               <img
-                src="/src/assets/facebook.svg"
+                src="/public/assets/facebook.svg"
                 alt=""
                 className="w-[24px] hover:cursor-pointer hover:scale-110"
               />
             </a>
             <a href="https://www.linkedin.com/in/bishwarajpaul/">
               <img
-                src="/src/assets/linkedin.svg"
+                src="/public/assets/linkedin.svg"
                 alt=""
                 className="w-[32px] hover:cursor-pointer hover:scale-110"
               />
             </a>
             <a href="https://github.com/Verathagnus">
               <img
-                src="/src/assets/github.svg"
+                src="/public/assets/github.svg"
                 alt=""
                 className="w-[24px] hover:cursor-pointer hover:scale-110"
               />
@@ -127,7 +127,7 @@ const Team = () => {
         variants={square2Variants}
       >
         {/* <div className="flex justify-center">
-            <img src="src/assets/tanveer.webp" alt="Chrome Image" />
+            <img src="public/assets/tanveer.webp" alt="Chrome Image" />
           </div> */}
         <h5 className="pt-6 text-xl font-bold">Chinmoy Talukdar</h5>
         <p className="text-gray-400"> SDE at Publicis Sapient</p>
@@ -136,21 +136,21 @@ const Team = () => {
           <div className="w-full flex justify-around">
             <a href="https://www.facebook.com/chinmoytalukdar.chinmoy">
               <img
-                src="/src/assets/facebook.svg"
+                src="/public/assets/facebook.svg"
                 alt=""
                 className="w-[24px] hover:cursor-pointer hover:scale-110"
               />
             </a>
             <a href="https://www.linkedin.com/in/chinmoy-talukdar-sde/">
               <img
-                src="/src/assets/linkedin.svg"
+                src="/public/assets/linkedin.svg"
                 alt=""
                 className="w-[32px] hover:cursor-pointer hover:scale-110"
               />
             </a>
             <a href="https://github.com/Chinmoy222">
               <img
-                src="/src/assets/github.svg"
+                src="/public/assets/github.svg"
                 alt=""
                 className="w-[24px] hover:cursor-pointer hover:scale-110"
               />
@@ -178,7 +178,7 @@ const Team = () => {
         variants={square3Variants}
       >
         {/* <div className="flex justify-center">
-            <img src="src/assets/tanveer.webp" alt="Chrome Image" />
+            <img src="public/assets/tanveer.webp" alt="Chrome Image" />
           </div> */}
         <h5 className="pt-6 text-xl font-bold">Tanveer Ahmed</h5>
         <p className="text-gray-400"> SDE at Brillio</p>
@@ -187,21 +187,21 @@ const Team = () => {
           <div className="w-full flex justify-around">
             <a href="https://www.facebook.com/profile.php?id=100017390656704">
               <img
-                src="/src/assets/facebook.svg"
+                src="/public/assets/facebook.svg"
                 alt=""
                 className="w-[24px] hover:cursor-pointer hover:scale-110"
               />
             </a>
             <a href="https://www.linkedin.com/in/tanveer-ahmed-589055112/">
               <img
-                src="/src/assets/linkedin.svg"
+                src="/public/assets/linkedin.svg"
                 alt=""
                 className="w-[32px] hover:cursor-pointer hover:scale-110"
               />
             </a>
             <a href="https://github.com/tanveer-98">
               <img
-                src="/src/assets/github.svg"
+                src="/public/assets/github.svg"
                 alt=""
                 className="w-[24px] hover:cursor-pointer hover:scale-110"
               />

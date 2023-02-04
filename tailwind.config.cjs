@@ -32,9 +32,9 @@ module.exports = {
       backgroundImage: {
         
         // 'footer-texture': "url('/img/footer-texture.png')",
-        "dots":"url('./src/assets/bg-dots.svg')",
-        "heroBg" :"url('./src/assets/background.jpg')",
-        "newsLetterBg":"url('./src/assets/background2.jpg')"
+        "dots":"url('./public/assets/bg-dots.svg')",
+        "heroBg" :"url('./public/assets/background.jpg')",
+        "newsLetterBg":"url('./public/assets/background2.jpg')"
       },
       spacing: {
           '128': '32rem',
