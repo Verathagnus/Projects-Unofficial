@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import reactLogo from "./assets/react.svg";
-import Arrow from "./assets/icon-arrow.svg";
+import reactLogo from "./react.svg";
+import Arrow from "./icon-arrow.svg";
 import { useAnimation,motion } from "framer-motion";
 import {useInView} from 'react-intersection-observer'
 import Hero from './components/hero'
@@ -61,7 +61,7 @@ function App() {
         <div className="hidden md:flex items-center justify-between space-x-20 my-6">
           {/* <!-- logo --> */}
           <div className="z-30">
-            <img src="src/assets/luitmania-logo.png" alt="" id="logo" className="w-[200px] " />
+            <img src="/luitmania-logo.png" alt="" id="logo" className="w-[200px] " />
           </div>
           {/* <!-- Menu Items --> */}
           <div className=" items-center space-x-4 uppercase text-grayishBlue md:flex">

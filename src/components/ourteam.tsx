@@ -76,7 +76,7 @@ const Team = () => {
         variants={square1Variants}
       >
         {/* <div className="flex justify-center">
-              <img src="src/assets/tanveer.webp" alt="Chrome Image" />
+              <img src="src/tanveer.webp" alt="Chrome Image" />
             </div> */}
         <h5 className="pt-6 text-xl font-bold">Bishwaraj Paul</h5>
         <p className="text-gray-400"> SDE at Brillio</p>
@@ -127,10 +127,10 @@ const Team = () => {
         variants={square2Variants}
       >
         {/* <div className="flex justify-center">
-            <img src="src/assets/tanveer.webp" alt="Chrome Image" />
+            <img src="/tanveer.webp" alt="Chrome Image" />
           </div> */}
         <h5 className="pt-6 text-xl font-bold">Chinmoy Talukdar</h5>
-        <p className="text-gray-400"> SDE at Publicis Sapient</p>
+        <p className="text-gray-400"> SDE at is Sapient</p>
         {/* Dots */}
         <div className="bg-dots bg-repeat-x px-6 pt-6 capitalize">
           <div className="w-full flex justify-around">
@@ -178,7 +178,7 @@ const Team = () => {
         variants={square3Variants}
       >
         {/* <div className="flex justify-center">
-            <img src="src/assets/tanveer.webp" alt="Chrome Image" />
+            <img src="/tanveer.webp" alt="Chrome Image" />
           </div> */}
         <h5 className="pt-6 text-xl font-bold">Tanveer Ahmed</h5>
         <p className="text-gray-400"> SDE at Brillio</p>
