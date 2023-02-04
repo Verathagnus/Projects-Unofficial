@@ -85,21 +85,21 @@ const Team = () => {
           <div className="w-full flex justify-around">
             <a href="https://www.facebook.com/bishwaraj.paul">
               <img
-                src="/src/assets/facebook.svg"
+                src="/facebook.svg"
                 alt=""
                 className="w-[24px] hover:cursor-pointer hover:scale-110"
               />
             </a>
             <a href="https://www.linkedin.com/in/bishwarajpaul/">
               <img
-                src="/src/assets/linkedin.svg"
+                src="/linkedin.svg"
                 alt=""
                 className="w-[32px] hover:cursor-pointer hover:scale-110"
               />
             </a>
             <a href="https://github.com/Verathagnus">
               <img
-                src="/src/assets/github.svg"
+                src="/github.svg"
                 alt=""
                 className="w-[24px] hover:cursor-pointer hover:scale-110"
               />
@@ -136,21 +136,21 @@ const Team = () => {
           <div className="w-full flex justify-around">
             <a href="https://www.facebook.com/chinmoytalukdar.chinmoy">
               <img
-                src="/src/assets/facebook.svg"
+                src="/facebook.svg"
                 alt=""
                 className="w-[24px] hover:cursor-pointer hover:scale-110"
               />
             </a>
             <a href="https://www.linkedin.com/in/chinmoy-talukdar-sde/">
               <img
-                src="/src/assets/linkedin.svg"
+                src="/linkedin.svg"
                 alt=""
                 className="w-[32px] hover:cursor-pointer hover:scale-110"
               />
             </a>
             <a href="https://github.com/Chinmoy222">
               <img
-                src="/src/assets/github.svg"
+                src="/github.svg"
                 alt=""
                 className="w-[24px] hover:cursor-pointer hover:scale-110"
               />
@@ -187,21 +187,21 @@ const Team = () => {
           <div className="w-full flex justify-around">
             <a href="https://www.facebook.com/profile.php?id=100017390656704">
               <img
-                src="/src/assets/facebook.svg"
+                src="/facebook.svg"
                 alt=""
                 className="w-[24px] hover:cursor-pointer hover:scale-110"
               />
             </a>
             <a href="https://www.linkedin.com/in/tanveer-ahmed-589055112/">
               <img
-                src="/src/assets/linkedin.svg"
+                src="/linkedin.svg"
                 alt=""
                 className="w-[32px] hover:cursor-pointer hover:scale-110"
               />
             </a>
             <a href="https://github.com/tanveer-98">
               <img
-                src="/src/assets/github.svg"
+                src="/github.svg"
                 alt=""
                 className="w-[24px] hover:cursor-pointer hover:scale-110"
               />
