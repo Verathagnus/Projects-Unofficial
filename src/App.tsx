@@ -61,7 +61,7 @@ function App() {
         <div className="hidden md:flex items-center justify-between space-x-20 my-6">
           {/* <!-- logo --> */}
           <div className="z-30">
-            <img src="public/assets/luitmania-logo.png" alt="" id="logo" className="w-[200px] " />
+            <img src="/assets/luitmania-logo.png" alt="" id="logo" className="w-[200px] " />
           </div>
           {/* <!-- Menu Items --> */}
           <div className=" items-center space-x-4 uppercase text-grayishBlue md:flex">
