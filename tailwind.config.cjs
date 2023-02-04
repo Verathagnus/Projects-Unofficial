@@ -30,7 +30,7 @@ module.exports = {
   
       },
       backgroundImage: {
-        'coffee': "url('./src/assets/background.jpg')",
+        
         // 'footer-texture': "url('/img/footer-texture.png')",
         "dots":"url('./src/assets/bg-dots.svg')",
         "heroBg" :"url('./src/assets/background.jpg')",
