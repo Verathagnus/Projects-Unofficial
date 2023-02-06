@@ -2,6 +2,7 @@ import React ,{useState} from 'react'
 import {Link} from 'react-scroll'
 const Navbar = () => {
     const [open, setOpen] = useState(false);
+    const [scrollReached , setScrollReached] = useState(false)
     const toggleHam = (e: any) => {
         e.preventDefault();
         if (open == false) {
@@ -13,17 +14,24 @@ const Navbar = () => {
         }
         setOpen(!open);
       };
+    function check(){
+        if(window.scrollY >= 600){
+            setScrollReached(true);
+        }
+        else setScrollReached(false)
+    }
+    window.addEventListener('scroll',check)
   return (
-    <nav className="container relative mx-auto px-1">
+    <nav className={`fixed  transition-all duration-300 ease-linear z-20 ${scrollReached?'bg-veryDarkBlue':'bg-white'} w-full mx-auto px-1`}>
         {/* <!-- Flex container for nav items --> */}
 
-        <div className="hidden md:flex items-center justify-between space-x-20 my-6">
+        <div className="hidden md:flex items-center justify-around space-x-20 my-6">
           {/* <!-- logo --> */}
           <div className="z-30">
             <img src="luitmania-logo.png" alt="" id="logo" className="w-[200px] " />
           </div>
           {/* <!-- Menu Items --> */}
-          <div className=" items-center space-x-4 uppercase text-grayishBlue md:flex">
+          <div className={`items-center space-x-4 uppercase ${scrollReached?'text-white':'text-grayishBlue'} md:flex`}>
             <Link to="hero" smooth={true} offset={0} className="tracking-tight hover:text-softRed">
               Home
             </Link>
