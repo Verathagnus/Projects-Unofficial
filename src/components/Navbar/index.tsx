@@ -35,24 +35,27 @@ const Navbar = () => {
             <Link to="hero" smooth={true} offset={0} className="tracking-tight hover:text-softRed">
               Home
             </Link>
-            <a href="" className="tracking-tight hover:text-softRed">
-              About Us
-            </a>
-            <a href="" className="tracking-tight hover:text-softRed">
+            <Link to="aboutus" smooth={true} offset={-120} className="tracking-tight hover:text-softRed">
+              About us 
+            </Link>
+            <Link to="services" smooth={true} offset={-120} className="tracking-tight hover:text-softRed">
               Services
-            </a>
-            <a href="" className="tracking-tight hover:text-softRed">
+            </Link>
+            <Link to="projects" smooth={true} offset={-120} className="tracking-tight hover:text-softRed">
               Projects
-            </a>
-            <a href="" className="tracking-tight hover:text-softRed">
-              FAQ
-            </a>
-            <a href="" className="tracking-tight hover:text-softRed">
-              newsletter
-            </a>
-            <a href="" className="tracking-tight hover:text-softRed">
-              contact us
-            </a>
+            </Link>
+            <Link to="faq" smooth={true} offset={-120} className="tracking-tight hover:text-softRed">
+              FAQ 
+            </Link>
+       
+           
+            <Link to="newsletter" smooth={true} offset={-120} className="tracking-tight hover:text-softRed">
+              NewsLetter
+            </Link>
+            <Link to="contactus" smooth={true} offset={-80} className="tracking-tight hover:text-softRed">
+              Contact Us
+            </Link>
+           
             {/* <a
               href=""
               className="px-8 py-2 text-white bg-softRed border-2 border-softRed
@@ -108,39 +111,52 @@ const Navbar = () => {
             </a>
           </div>
           <div className="w-full py-3 text-center hover:text-blue-500">
-            <a href="" className="block">
-              Home
-            </a>
+          <Link to="hero"    onClick ={(e:any)=>toggleHam(e)} smooth={true} offset={-120} className="tracking-tight hover:text-softRed">
+              
+             Home
+          </Link>
           </div>
           <div className="w-full py-3 text-center hover:text-blue-500">
-            <a href="" className="block">
-              About us
-            </a>
+          <Link to="aboutus"    onClick ={(e:any)=>toggleHam(e)} smooth={true} offset={-120} className="tracking-tight hover:text-softRed">
+              
+              About Us
+          </Link>
+           
           </div>{" "}
           <div className="w-full py-3 text-center hover:text-blue-500">
-            <a href="" className="block">
+          <Link to="services"   onClick ={(e:any)=>toggleHam(e)} smooth={true} offset={-120} className="tracking-tight hover:text-softRed">
+              
               Services
-            </a>
+          </Link>
+            
           </div>{" "}
           <div className="w-full py-3 text-center hover:text-blue-500 hover:shadow-blue-500 hover:shadow-">
-            <a href="" className="block">
+          <Link to="projects"   onClick ={(e:any)=>toggleHam(e)} smooth={true} offset={-120} className="tracking-tight hover:text-softRed">
+              
               Projects
-            </a>
+          </Link>
+            
           </div>{" "}
           <div className="w-full py-3 text-center hover:text-blue-500">
-            <a href="" className="block">
-              FAQ
-            </a>
-          </div>
-          <div className="w-full py-3 text-center hover:text-blue-500">
-            <a href="" className="block">
-              NewsLetter
-            </a>
-          </div>
-          <div className="w-full py-3 text-center hover:text-blue-500">
-            <a href="" className="block">
+          <Link to="faq"   onClick ={(e:any)=>toggleHam(e)} smooth={true} offset={-120} className="tracking-tight hover:text-softRed block" >
+              
               Contact Us
-            </a>
+          </Link>
+          </div>
+          <div className="w-full py-3 text-center hover:text-blue-500">
+
+          <Link to="newsletter"   onClick ={(e:any)=>toggleHam(e)} smooth={true} offset={-120} className="tracking-tight hover:text-softRed">
+              
+              NewsLetter
+          </Link>
+            
+          </div>
+          <div className="w-full py-3 text-center hover:text-blue-500" >
+          <Link to="contactus"   onClick ={(e:any)=>toggleHam(e)} smooth={true} offset={-120} className="tracking-tight hover:text-softRed">
+              
+              Contact Us
+          </Link>
+          
           </div>
         </div>
       </nav>

@@ -52,9 +52,9 @@ function App() {
 
       <Team />
 
-      <Faq />
 
       <Projects />
+      <Faq />
 
       <NewsLetter />
 

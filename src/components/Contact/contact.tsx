@@ -96,6 +96,7 @@ const Contact = () => {
     }, [controls, inView]);
     return (
       <motion.div
+        id="contactus"
         className=""
         ref={refHeading}
         initial="hidden"

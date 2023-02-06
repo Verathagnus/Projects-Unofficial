@@ -138,7 +138,7 @@ const Projects = () => {
 
     }
   return (
-    <section id="ourProjects">
+    <section id="projects" className='mt-20'>
         <div className="container mx-auto font-semibold text-center md:text-4xl">
           <Heading/>
         </div>
