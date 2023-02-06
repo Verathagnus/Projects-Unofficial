@@ -1,4 +1,4 @@
-// import {} from './src/assets/background.jpg'
+// import {} from './src/background.jpg'
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",'./node_modules/tw-elements/dist/js/**/*.js'
@@ -32,9 +32,9 @@ module.exports = {
       backgroundImage: {
         
         // 'footer-texture': "url('/img/footer-texture.png')",
-        "dots":"url('/assets/bg-dots.svg')",
-        "heroBg" :"url('/assets/background.jpg')",
-        "newsLetterBg":"url('/assets/background2.jpg')"
+        "dots":"url('/bg-dots.svg')",
+        "heroBg" :"url('/background.jpg')",
+        "newsLetterBg":"url('/background2.jpg')"
       },
       spacing: {
           '128': '32rem',

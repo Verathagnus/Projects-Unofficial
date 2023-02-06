@@ -56,7 +56,7 @@ const Projects = () => {
         variants = {square1Variants}
         >
             <div className="flex justify-center">
-              <img src="/assets/apexsite.png" alt="Apex site" />
+              <img src="/apexsite.png" alt="Apex site" />
             </div>
             <h5 className="pt-6 text-xl font-bold">Apex Design & Construction</h5>
             <p className="text-gray-400"> WebSite for Design & Construction Site</p>
@@ -88,7 +88,7 @@ const Projects = () => {
       variants = {square2Variants}
       >
           <div className="flex justify-center">
-            <img src="/assets/apexsite.png" alt="Chrome Image" />
+            <img src="/apexsite.png" alt="Chrome Image" />
           </div>
           <h5 className="pt-6 text-xl font-bold">Ganasuraksha Party Site</h5>
           <p className="text-gray-400"> WebSite for Political Party</p>
@@ -121,7 +121,7 @@ const Projects = () => {
       variants = {square3Variants}
       >
           <div className="flex justify-center">
-            <img src="/assets/apexsite.png" alt="Ganasuraksha" />
+            <img src="/apexsite.png" alt="Ganasuraksha" />
           </div>
           <h5 className="pt-6 text-xl font-bold"></h5>
           <p className="text-gray-400"> SDE at Brillio</p>

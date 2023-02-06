@@ -46,7 +46,7 @@ const index = () => {
           {/* Panel Image */}
           <div className="flex justify-center md:w-1/2">
             <img
-              src="src/assets/illustration-features-tab-1.svg"
+              src="src/illustration-features-tab-1.svg"
               alt=""
               className="relative z-10"
             />
@@ -81,7 +81,7 @@ const index = () => {
           {/* Panel Image */}
           <div className="flex justify-center md:w-1/2">
             <img
-              src="src/assets/illustration-features-tab-2.svg"
+              src="src/illustration-features-tab-2.svg"
               alt=""
               className="relative z-10"
             />
@@ -116,7 +116,7 @@ const index = () => {
           {/* Panel Image */}
           <div className="flex justify-center md:w-1/2">
             <img
-              src="src/assets/illustration-features-tab-3.svg"
+              src="src/illustration-features-tab-3.svg"
               alt=""
               className="relative z-10"
             />

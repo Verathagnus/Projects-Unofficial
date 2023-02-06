@@ -82,7 +82,7 @@ const hero = () => {
       >
         <div className="bg-hero"></div>
         <img
-          src="/assets/illustration-hero.svg"
+          src="/illustration-hero.svg"
           alt=""
           className="relative z-10 lg:top-24 xl:top-0 overflow-x-visible"
         />
@@ -165,7 +165,7 @@ const hero = () => {
         {/* <div className="relative mx-auto lg:mx-0 lg:mb-0 lg:w-1/2">
           <div className="bg-hero"></div>
           <img
-            src="src/assets/illustration-hero.svg"
+            src="src/illustration-hero.svg"
             alt=""
             className="relative z-10 lg:top-24 xl:top-0 overflow-x-visible"
           />
