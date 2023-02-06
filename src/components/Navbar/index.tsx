@@ -1,5 +1,5 @@
 import React ,{useState} from 'react'
-
+import {Link} from 'react-scroll'
 const Navbar = () => {
     const [open, setOpen] = useState(false);
     const toggleHam = (e: any) => {
@@ -20,13 +20,13 @@ const Navbar = () => {
         <div className="hidden md:flex items-center justify-between space-x-20 my-6">
           {/* <!-- logo --> */}
           <div className="z-30">
-            <img src="/assets/luitmania-logo.png" alt="" id="logo" className="w-[200px] " />
+            <img src="luitmania-logo.png" alt="" id="logo" className="w-[200px] " />
           </div>
           {/* <!-- Menu Items --> */}
           <div className=" items-center space-x-4 uppercase text-grayishBlue md:flex">
-            <a href="" className="tracking-tight hover:text-softRed">
+            <Link to="hero" smooth={true} offset={0} className="tracking-tight hover:text-softRed">
               Home
-            </a>
+            </Link>
             <a href="" className="tracking-tight hover:text-softRed">
               About Us
             </a>
