@@ -32,27 +32,27 @@ const Navbar = () => {
           </div>
           {/* <!-- Menu Items --> */}
           <div className={`items-center space-x-4 uppercase ${scrollReached?'text-white':'text-grayishBlue'} md:flex`}>
-            <Link to="hero" smooth={true} offset={0} className="tracking-tight hover:text-softRed">
+            <Link to="hero" smooth={true} offset={0} className="tracking-tight hover:text-softRed cursor-pointer">
               Home
             </Link>
-            <Link to="aboutus" smooth={true} offset={-120} className="tracking-tight hover:text-softRed">
+            <Link to="aboutus" smooth={true} offset={-120} className="tracking-tight hover:text-softRed cursor-pointer">
               About us 
             </Link>
-            <Link to="services" smooth={true} offset={-120} className="tracking-tight hover:text-softRed">
+            <Link to="services" smooth={true} offset={-120} className="tracking-tight hover:text-softRed cursor-pointer">
               Services
             </Link>
-            <Link to="projects" smooth={true} offset={-120} className="tracking-tight hover:text-softRed">
+            <Link to="projects" smooth={true} offset={-120} className="tracking-tight hover:text-softRed cursor-pointer">
               Projects
             </Link>
-            <Link to="faq" smooth={true} offset={-120} className="tracking-tight hover:text-softRed">
+            <Link to="faq" smooth={true} offset={-120} className="tracking-tight hover:text-softRed cursor-pointer">
               FAQ 
             </Link>
        
            
-            <Link to="newsletter" smooth={true} offset={-120} className="tracking-tight hover:text-softRed">
+            <Link to="newsletter" smooth={true} offset={-120} className="tracking-tight hover:text-softRed cursor-pointer">
               NewsLetter
             </Link>
-            <Link to="contactus" smooth={true} offset={-80} className="tracking-tight hover:text-softRed">
+            <Link to="contactus" smooth={true} offset={-80} className="tracking-tight hover:text-softRed cursor-pointer">
               Contact Us
             </Link>
            
