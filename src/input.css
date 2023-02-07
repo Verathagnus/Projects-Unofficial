@@ -138,3 +138,8 @@ body{
     font-family: 'Open Sans', sans-serif;
     opacity: 0;
 }
+
+.nav-link a{
+    display: block ;
+    padding : 2rem 0 ;
+}
